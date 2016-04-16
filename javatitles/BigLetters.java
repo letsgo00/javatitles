@@ -47,6 +47,61 @@ public class BigLetters {
 			System.out.println(" \\__|");
 			System.out.println("");
 		}
+		
+		if (l.equalsIgnoreCase("x")){
+			System.out.println("");
+			System.out.println("__  __ ");
+			System.out.println("\\ \\/ /");
+			System.out.println(" /  \\ ");
+			System.out.println("/_/\\_\\");
+			System.out.println(" \\__|");
+			System.out.println("");
+		}
+		
+		if (l.equalsIgnoreCase("hearth3")){
+			System.out.println("                .:::.   .:::.     .:::.   .:::.     .:::.   .:::.");
+			System.out.println("               :::::::.:::::::   :::::::.:::::::   :::::::.:::::::");
+			System.out.println("               :::::::::::::::   :::::::::::::::   :::::::::::::::");
+			System.out.println("               ':::::::::::::'   ':::::::::::::'   ':::::::::::::'");
+			System.out.println("                 ':::::::::'       ':::::::::'       ':::::::::'  ");
+			System.out.println("                   ':::::'           ':::::'           ':::::'");
+			System.out.println("                     ':'               ':'               ':'");
+			System.out.println("");
+		}
+			
+		if (l.equalsIgnoreCase("hearth2")){
+			System.out.println("                .:::.   .:::.     .:::.   .:::.    ");
+			System.out.println("               :::::::.:::::::   :::::::.:::::::    __  __ ");
+			System.out.println("               :::::::::::::::   :::::::::::::::    \\ \\/ /");
+			System.out.println("               ':::::::::::::'   ':::::::::::::'     \\  / ");
+			System.out.println("                 ':::::::::'       ':::::::::'       /  \\ ");
+			System.out.println("                   ':::::'           ':::::'        /_/\\_\\");
+			System.out.println("                     ':'               ':'         ");
+			System.out.println("");
+		}
+		
+		if (l.equalsIgnoreCase("hearth1")){
+			System.out.println("                .:::.   .:::.         ");
+			System.out.println("               :::::::.:::::::       __  __        __  __ ");
+			System.out.println("               :::::::::::::::       \\ \\/ /        \\ \\/ /");
+			System.out.println("               ':::::::::::::'        \\  /          \\  / ");
+			System.out.println("                 ':::::::::'          /  \\          /  \\ ");
+			System.out.println("                   ':::::'           /_/\\_\\        /_/\\_\\");
+			System.out.println("                     ':'               ");
+			System.out.println("");
+		}
+		
+		if (l.equalsIgnoreCase("hearth0")){
+			System.out.println("");
+			System.out.println("                   __  __       __  __        __  __ ");
+			System.out.println("                   \\ \\/ /       \\ \\/ /        \\ \\/ /");
+			System.out.println("                    \\  /         \\  /          \\  / ");
+			System.out.println("                    /  \\         /  \\          /  \\ ");
+			System.out.println("                   /_/\\_\\       /_/\\_\\        /_/\\_\\");
+			System.out.println("");
+			System.out.println("");
+		}
+		
 	}
 	
 }

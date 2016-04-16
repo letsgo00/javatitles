@@ -21,7 +21,7 @@ public class Main {
 		System.out.println("| |_| | (_| |\\ V / (_| || | | | |_| |  __/\\__ \\");
 		System.out.println(" \\___/ \\__,_| \\_/ \\__,_||_| |_|\\__|_|\\___||___/");
 		
-		System.out.println("Version: 1.5.1 | @xdavidhu");
+		System.out.println("Version: 1.6.0 | @xdavidhu");
 		
 		Sleep.sleep(300);
 		System.out.println(" ");
@@ -209,6 +209,9 @@ public class Main {
 			}
 		}
 		
+		
+		
+		
 	}
 		
 		String newGame;
@@ -251,13 +254,16 @@ public class Main {
 		
 		if (hp.equalsIgnoreCase("O O O")) {
 			hp = "O O X";
+			imgGenerator.damage(hp);
 			return true;
 		}
 		else if (hp.equalsIgnoreCase("O O X")) {
 			hp = "O X X";
+			imgGenerator.damage(hp);
 			return true;
 		}
 		else {
+			imgGenerator.damage("X X X");
 			Clear.clearLines(24);
 			System.out.println("Game over! - No more HP!");
 			System.out.println("");
