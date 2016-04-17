@@ -1,5 +1,11 @@
 package tk.ckdeveloper.javatitles;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.Scanner;
 
 public class Main {
@@ -9,7 +15,7 @@ public class Main {
 	static int lvl = 1;
 
 	@SuppressWarnings("static-access")
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		Scanner s = new Scanner(System.in);
 		
@@ -21,7 +27,7 @@ public class Main {
 		System.out.println("| |_| | (_| |\\ V / (_| || | | | |_| |  __/\\__ \\");
 		System.out.println(" \\___/ \\__,_| \\_/ \\__,_||_| |_|\\__|_|\\___||___/");
 		
-		System.out.println("Version: 1.6.0 | @xdavidhu");
+		System.out.println("Version: 1.6.1 | @xdavidhu");
 		
 		Sleep.sleep(300);
 		System.out.println(" ");
@@ -216,6 +222,11 @@ public class Main {
 		
 		String newGame;
 		
+		HttpURLConnection conn = connect("javatitleslog","point=" + point + "&level=" + lvl);
+		BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		String data = in.readLine();
+		System.out.println(data);
+		
 		System.out.println("");
 		System.out.println("New game? (Y/n)");
 		
@@ -272,9 +283,40 @@ public class Main {
 			Sleep.sleep(500);
 			return false;
 		}
-		
-		
+	
 	}
+	
+	private static String ip = "46.101.229.103";
+	
+	private static HttpURLConnection connect(String api, String args) {
+        try {
+            byte[] data = args.getBytes(Charset.forName("UTF-8"));
+            int dataLength = args.length();
+            String request = "http://" + ip + "/api/" + api + ".php";
+            URL url = new URL(request);
+
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.setDoOutput(true);
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+            connection.setRequestProperty("charset", "UTF-8");
+            connection.setRequestProperty("Content-Length", String.valueOf(dataLength));
+
+            DataOutputStream out = new DataOutputStream(connection.getOutputStream());
+            out.write(data);
+            out.flush();
+            out.close();
+
+            return connection;
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+
+            return null;
+        }
+    }
 	
 	
 	
