@@ -16,17 +16,15 @@ public class PostAPI {
     public static String pageName;
     public static String args;
 
+    /**
+     * @author xdavidhu
+     * @param encryptionIn "http" or "https" <-- Method to connect to the site
+     * @param ipIn "192.168.0.1" <-- The ip of the site
+     * @param pathToPageIn "/api/" <-- Path to the page
+     */
    public static void postToPage(String encryptionIn, String ipIn, String pathToPageIn, String pageNameIn, String argsIn){
 
        /*
-
-        Made by @xdavidhu -> CKDev
-
-        Documentation / Examples:
-
-        encryptionIn = "http" or "https" <-- Method to connect to the site
-        ipIn = "192.168.0.1" <-- The ip of the site
-        pathToPageIn = "/api/" <-- Path to the page
         pageNameIn = "postreciever" <-- Name of the page (Don't need '.php'!)
         args = "username=" + username + "&password=" + password <-- This is the date for the post
 
